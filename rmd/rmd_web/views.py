@@ -8,7 +8,7 @@ from django.contrib.auth.models import auth
 from django.contrib.auth import authenticate, login as auth_login, logout as auth_logout
 
 # from fire.fireconfig import Firebase
-from .models import Person,Post, Comment
+from .models import Person, Post, Comment
 from .forms import PostForm, CreateUserForm, LoginForm, PersonForm
 
 # SEARCH 
@@ -21,6 +21,16 @@ from django.contrib import messages
 import logging
 logger = logging.getLogger(__name__)
 # Create your views here.
+
+def home2(request):
+    # Fetch most recent posts ordered by creation date
+    recent_posts = Post.objects.order_by('-created_at')
+    
+    context = {
+        'user': request.user,  # Pass the user object to the context
+        'recent_posts': recent_posts  # Pass recent posts to the context
+    }
+    return render(request, 'home2.html', context=context)
 
 def home(request):
     # Fetch most recent posts ordered by creation date
