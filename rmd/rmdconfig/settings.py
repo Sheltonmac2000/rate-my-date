@@ -73,17 +73,7 @@ WSGI_APPLICATION = 'rmdconfig.wsgi.application'
 
 
 # Database
-# AWS
-# DATABASES = {
-#     'default': {
-#         'ENGINE': 'django.db.backends.postgresql',
-#         'NAME': 'postgres',
-#         'USER': 'masteruser',
-#         'PASSWORD': '12345678',
-#         'HOST': 'w3-django-project.c5ui02w4i1m6.us-east-2.rds.amazonaws.com',
-#         'PORT': '5432'
-#     }
-# }
+
 
 # LOCAL HOST
 DATABASES = {

@@ -7,7 +7,7 @@ from django.contrib.auth.models import auth
 
 from django.contrib.auth import authenticate, login as auth_login, logout as auth_logout
 
-from fire.fireconfig import Firebase
+# from fire.fireconfig import Firebase
 from .models import Person,Post, Comment
 from .forms import PostForm, CreateUserForm, LoginForm, PersonForm
 
